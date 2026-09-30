@@ -1,0 +1,62 @@
+{
+  "source": "sample_logs.csv",
+  "events_analyzed": 16,
+  "alerts_generated": 5,
+  "alerts": [
+    {
+      "severity": "HIGH",
+      "type": "BRUTE_FORCE",
+      "ip": "203.0.113.42",
+      "message": "3 failed logins in 5 minutes",
+      "first_seen": "2026-09-30 09:00:00",
+      "last_seen": "2026-09-30 09:02:00",
+      "attack_tactic": "Credential Access",
+      "attack_technique": "T1110",
+      "recommended_action": "Review authentication logs and consider rate limiting or account lockout."
+    },
+    {
+      "severity": "MEDIUM",
+      "type": "PORT_SCAN",
+      "ip": "198.51.100.23",
+      "message": "Rejected connections to 5 ports in 1 minute",
+      "first_seen": "2026-09-30 09:10:00",
+      "last_seen": "2026-09-30 09:10:20",
+      "attack_tactic": "Discovery",
+      "attack_technique": "T1046",
+      "recommended_action": "Review firewall events and restrict unnecessary exposed services."
+    },
+    {
+      "severity": "LOW",
+      "type": "SENSITIVE_RESOURCE",
+      "ip": "192.0.2.55",
+      "message": "Request for /.env (BLOCKED)",
+      "first_seen": "2026-09-30 09:15:00",
+      "last_seen": "2026-09-30 09:15:00",
+      "attack_tactic": "Discovery",
+      "attack_technique": "T1083",
+      "recommended_action": "Verify the request and keep secrets outside publicly served paths."
+    },
+    {
+      "severity": "HIGH",
+      "type": "PASSWORD_SPRAY",
+      "ip": "192.0.2.70, 192.0.2.71",
+      "message": "3 failed logins against user finance from 2 IPs",
+      "first_seen": "2026-09-30 09:25:00",
+      "last_seen": "2026-09-30 09:27:00",
+      "attack_tactic": "Credential Access",
+      "attack_technique": "T1110.003",
+      "recommended_action": "Review the targeted accounts and enforce MFA or adaptive login controls."
+    },
+    {
+      "severity": "HIGH",
+      "type": "WEB_ATTACK",
+      "ip": "192.0.2.80",
+      "message": "Possible SQL injection probe in request for /search?q=union+select",
+      "first_seen": "2026-09-30 09:30:00",
+      "last_seen": "2026-09-30 09:30:00",
+      "attack_tactic": "Initial Access",
+      "attack_technique": "T1190",
+      "recommended_action": "Inspect the request and application logs, then validate input handling and WAF rules."
+    }
+  ]
+}
