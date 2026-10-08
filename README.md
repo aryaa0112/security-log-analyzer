@@ -63,10 +63,6 @@ tests/             # automated unit tests
 report.json        # generated demo report (after running the command above)
 ```
 
-## Resume description
-
-> Built LogShield, a Python security monitoring CLI that parses structured CSV events, applies configurable time-window detection rules for brute force and port scanning, assigns alert severity, recommends defensive actions, and exports JSON reports; added automated unit tests.
-
 ## Skills demonstrated
 
 Python, CSV parsing, datetime windows, correlation rules, data classes, defensive security monitoring, alert triage, MITRE ATT&CK mapping, JSON serialization, command-line interfaces, unit testing, and technical documentation.
